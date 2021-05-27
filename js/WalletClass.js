@@ -1,20 +1,20 @@
 class WalletClass {
   constructor(money) {
-    let _monay = monay;
+    let _money = money;
 
-    this.getValueOfWallet = () => _monay;
+    this.getValueOfWallet = () => _money;
 
     this.checkCanPlay = (value) => {
-      if (_monay >= value) return true;
+      if (_money >= value) return true;
       return false;
     };
 
     this.changeWallet = (value, type = "+") => {
       if (typeof value === "number" && !isNaN(value)) {
         if (type === "+") {
-          return (_monay += value);
+          return (_money += value);
         } else if (type === "-") {
-          return (_monay -= value);
+          return (_money -= value);
         }
       } else {
         throw new Error("That is not a number!");
@@ -22,5 +22,3 @@ class WalletClass {
     };
   }
 }
-
-
