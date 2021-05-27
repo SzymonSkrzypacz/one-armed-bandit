@@ -1,4 +1,4 @@
-class walletClass {
+class WalletClass {
   constructor(money) {
     let _monay = monay;
 
@@ -23,4 +23,4 @@ class walletClass {
   }
 }
 
-const wallet = new walletClass(100);
+//const wallet = new walletClass(100);
