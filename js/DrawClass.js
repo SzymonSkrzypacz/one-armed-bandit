@@ -16,4 +16,4 @@ class DrawClass {
   }
 }
 
-const draw = new DrawClass();
+

@@ -17,4 +17,4 @@ showStats(){
 }
 }
 
-//const statistics = new StatisticsClass()
+
