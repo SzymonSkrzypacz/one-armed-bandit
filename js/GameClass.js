@@ -33,6 +33,7 @@ class GameClass {
       result = `You won $ ${wonMoney} `;
     } else if (!result && result !== "") {
       result = `You have lost $ ${bid} `;
+     
     }
     this.resultSpan.textContent = result;
     this.gamesSpan.textContent = stats[0];
@@ -42,13 +43,13 @@ class GameClass {
     this.bidInput.value = "";
   }
 
-
   start() {
     if (this.bidInput.value < 1)
       return alert("The amount, you want to play is too small!");
-    const bid = Math.floor(this.bidInput.value);
 
-    if (this.wallet.checkCanPlay(bid)) {
+    const bid = Math.floor(this.bidInput.value);
+   
+    if (!this.wallet.checkCanPlay(bid)) {
       return alert("You have insufficient funds in your account.");
     }
 
@@ -64,12 +65,12 @@ class GameClass {
     this.stats.addGameStatistics(win, bid);
 
     this.render(
-        colors,
-        this.wallet.getValueOfWallet(),
-        win,
-        this.stats.showStats(),
-        bid,
-        moneyWon
-      );
+      colors,
+      this.wallet.getValueOfWallet(),
+      win,
+      this.stats.showStats(),
+      bid,
+      moneyWon
+    );
   }
 }
